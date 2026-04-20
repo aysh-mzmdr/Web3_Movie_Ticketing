@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import MovieCard from "../components/MovieCard.jsx";
 import styles from "./Home.module.css";
+import useWeb3 from "../context/Web3Context.jsx";
 
 export default function HomePage() {
   const [movies,  setMovies]  = useState([]);
   const [loading, setLoading] = useState(false);
+  const { account,connect } = useWeb3()
 
   return (
     <main className={styles.main}>

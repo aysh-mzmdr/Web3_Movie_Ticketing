@@ -17,9 +17,9 @@ export default function Navbar() {
 
         {/* Logo */}
         <div className={styles.logo}>
-          <span className="text-2xl">🎬</span>
+          <span style={{fontSize:"1.2rem"}}>🎬</span>
           <span className={styles.logoText}>
-            CineChain
+            Web3 Movie Ticketing System
           </span>
         </div>
 

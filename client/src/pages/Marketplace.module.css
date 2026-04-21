@@ -1,0 +1,24 @@
+.main {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 40px 16px;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.025em;
+  margin-bottom: 8px;
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 3rem;
+  }
+}
+
+.subtitle {
+  color: #a1a1aa;
+  font-size: 1rem;
+}

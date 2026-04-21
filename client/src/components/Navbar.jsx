@@ -16,11 +16,29 @@ export default function Navbar() {
       <div className={styles.navInner}>
 
         {/* Logo */}
-        <div className={styles.logo}>
+        <Link to="/" className={styles.logo}>
           <span style={{fontSize:"1.2rem"}}>🎬</span>
           <span className={styles.logoText}>
-            Web3 Movie Ticketing System
+            Web3 Ticket System
           </span>
+        </Link>
+
+        <div className={styles.navLinks}>
+          <Link
+            to="/"
+            className={pathname === "/" ? styles.navLinkActive : styles.navLink}
+          >
+            Home
+          </Link>
+        </div>
+
+        <div className={styles.navLinks}>
+          <Link
+            to="/marketplace"
+            className={pathname === "/marketplace" ? styles.navLinkActive : styles.navLink}
+          >
+            Marketplace
+          </Link>
         </div>
 
         <div className={styles.walletArea}>
@@ -64,6 +82,12 @@ export default function Navbar() {
 
       {/* Mobile nav */}
       <div className={styles.mobileNav}>
+          <Link
+            to="/marketplace"
+            className={pathname === "/marketplace" ? styles.mobileNavLinkActive : styles.mobileNavLink}
+          >
+            Marketplace
+          </Link>
           <Link
             to="/profile"
             className={pathname === "/profile" ? styles.mobileNavLinkActive : styles.mobileNavLink}

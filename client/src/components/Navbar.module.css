@@ -173,6 +173,39 @@
   opacity: 0.6;
 }
 
+.wrongNetworkBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: #ef4444;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: background-color 0.15s;
+  border: none;
+  cursor: pointer;
+}
+
+.wrongNetworkBtn:hover {
+  background-color: #f87171;
+}
+
+.wrongNetworkBtn:disabled {
+  opacity: 0.6;
+  background-color: #fbbf24;
+  color: #09090b;
+}
+
+.wrongNetworkDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background-color: #ffffff;
+  flex-shrink: 0;
+}
+
 .spinnerSm {
   animation: spin 1s linear infinite;
   border: 2px solid #09090b;

@@ -3,7 +3,7 @@ import useWeb3 from "../context/Web3Context";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
-  const { account, connect, disconnect, connecting } = useWeb3();
+  const { account, connect, disconnect, connecting, correctNetwork } = useWeb3();
   const { pathname } = useLocation();
 
   const shortAddr = (addr) => {
@@ -24,7 +24,16 @@ export default function Navbar() {
         </div>
 
         <div className={styles.walletArea}>
-          {account ? (
+          {!correctNetwork ? (
+            <button onClick={connect} className={styles.wrongNetworkBtn}>
+              {connecting ? (
+                <span className={styles.spinnerSm} />
+              ) : (
+                <span className={styles.wrongNetworkDot} />
+              )}
+              {connecting ? "Connecting…" : "Wrong Network"}
+            </button>
+          ) : account ? (
             <>
               <Link
                 to="/profile"

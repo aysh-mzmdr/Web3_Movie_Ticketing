@@ -4,8 +4,9 @@ import Navbar from "../components/Navbar.jsx";
 import styles from "./Home.module.css";
 import useWeb3 from "../context/Web3Context.jsx";
 
+import { movies } from "../../movies.js";
+
 export default function HomePage() {
-  const [movies,  setMovies]  = useState([]);
   const [loading, setLoading] = useState(false);
   const { account,connect } = useWeb3()
 

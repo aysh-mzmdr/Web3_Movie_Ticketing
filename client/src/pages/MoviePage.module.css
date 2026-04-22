@@ -1,0 +1,383 @@
+.main {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 40px 16px 64px;
+}
+
+.backLink {
+  position: fixed;
+  top: 80px;
+  left: 24px;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background-color: #27272a;
+  border: 1px solid #3f3f46;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.backLink:hover {
+  background-color: #3f3f46;
+  border-color: #fbbf24;
+  color: #fbbf24;
+}
+
+/* ── Hero ── */
+.hero {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 48px;
+  align-items: flex-start;
+}
+
+.posterWrapper {
+  flex-shrink: 0;
+  width: 160px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+@media (min-width: 640px) {
+  .posterWrapper {
+    width: 200px;
+  }
+}
+
+.poster {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.heroInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 4px;
+}
+
+.genreBadge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background-color: rgba(251, 191, 36, 0.15);
+  color: #fbbf24;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  margin: 0;
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 2.25rem;
+  }
+}
+
+.description {
+  color: #a1a1aa;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  max-width: 40rem;
+  margin: 0;
+}
+
+.priceTag {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.priceValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fbbf24;
+}
+
+.priceLabel {
+  font-size: 0.875rem;
+  color: #71717a;
+}
+
+/* ── Booking section ── */
+.bookingSection {
+  background-color: #18181b;
+  border: 1px solid #27272a;
+  border-radius: 20px;
+  padding: 32px 24px;
+}
+
+.sectionTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 24px;
+}
+
+/* Screen */
+.screenWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.screen {
+  width: 60%;
+  max-width: 360px;
+  text-align: center;
+  padding: 6px 0;
+  border-radius: 4px 4px 0 0;
+  background: linear-gradient(to bottom, #3f3f46, #27272a);
+  color: #71717a;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
+}
+
+/* Seat grid */
+.seatGrid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.seatRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rowLabel {
+  width: 16px;
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #52525b;
+  text-align: center;
+}
+
+.seats {
+  display: flex;
+  gap: 6px;
+}
+
+/* Individual seat */
+.seat {
+  width: 28px;
+  height: 26px;
+  border-radius: 6px 6px 3px 3px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.12s, transform 0.1s;
+  flex-shrink: 0;
+}
+
+.seat:active:not(:disabled) {
+  transform: scale(0.9);
+}
+
+.seat.available {
+  background-color: #27272a;
+}
+
+.seat.available:hover {
+  background-color: rgba(251, 191, 36, 0.35);
+}
+
+.seat.selected {
+  background-color: #fbbf24;
+}
+
+.seat.selected:hover {
+  background-color: #fcd34d;
+}
+
+.seat.taken {
+  background-color: #7f1d1d;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Legend */
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #27272a;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+  color: #a1a1aa;
+}
+
+.legendDot {
+  width: 18px;
+  height: 16px;
+  border-radius: 4px 4px 2px 2px;
+  display: inline-block;
+}
+
+.legendDot.available {
+  background-color: #27272a;
+  border: 1px solid #3f3f46;
+}
+
+.legendDot.selected {
+  background-color: #fbbf24;
+}
+
+.legendDot.taken {
+  background-color: #7f1d1d;
+  opacity: 0.7;
+}
+
+/* Summary bar */
+.summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid #27272a;
+  flex-wrap: wrap;
+}
+
+.summaryInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.summaryHint {
+  font-size: 0.875rem;
+  color: #52525b;
+  margin: 0;
+}
+
+.summarySeats {
+  font-size: 0.875rem;
+  color: #d4d4d8;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  margin: 0;
+  max-width: 360px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.summaryTotal {
+  font-size: 0.875rem;
+  color: #a1a1aa;
+  margin: 0;
+}
+
+.totalPrice {
+  color: #fbbf24;
+  font-weight: 700;
+}
+
+.buyBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 10px;
+  background-color: #fbbf24;
+  color: #09090b;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.15s, opacity 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.buyBtn:hover:not(:disabled) {
+  background-color: #fcd34d;
+}
+
+.buyBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Spinner */
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(9, 9, 11, 0.3);
+  border-top-color: #09090b;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Tx feedback */
+.txSuccess {
+  margin-top: 16px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background-color: rgba(52, 211, 153, 0.1);
+  border: 1px solid rgba(52, 211, 153, 0.25);
+  color: #34d399;
+  font-size: 0.875rem;
+}
+
+.txHash {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.8125rem;
+  color: #6ee7b7;
+}
+
+.txFailed {
+  margin-top: 16px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background-color: rgba(248, 113, 113, 0.1);
+  border: 1px solid rgba(248, 113, 113, 0.25);
+  color: #f87171;
+  font-size: 0.875rem;
+}
+
+/* 404 */
+.notFound {
+  max-width: 64rem;
+  margin: 80px auto;
+  text-align: center;
+  color: #71717a;
+}

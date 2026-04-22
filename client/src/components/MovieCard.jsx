@@ -5,13 +5,12 @@ export default function MovieCard({ movieId, movie }) {
   return (
     <Link to={`/movie/${movieId}`} className={styles.card}>
       <div className={styles.posterWrapper}>
-        <img src={movie.imageURI} alt={movie.title} className={styles.posterImg}/>
+        <img src={movie.imageURI} alt={movie.title} className={styles.posterImg} referrerPolicy="no-referrer"/>
         <div className={styles.posterGradient} />
 
         <span className={styles.genreBadge}>
           {movie.genre}
         </span>
-        {console.log(movie)}
         <div className={styles.playOverlay}>
           <div className={styles.playButton}>
             <svg className={styles.playIcon} fill="currentColor" viewBox="0 0 24 24">

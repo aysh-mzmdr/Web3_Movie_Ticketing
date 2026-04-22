@@ -1,0 +1,42 @@
+export const movies = [
+    {
+        id: 1,
+        imageURI: "https://image.tmdb.org/t/p/w500/8FHOtUpNIk5ZPEay2N2EY5lrxkv.jpg",
+        title: "Dhurandhar",
+        genre: "Action / Thriller",
+        description: "A gripping tale of power, deception, and survival as a cunning strategist navigates the dangerous world of crime and politics.",
+        ticketPrice: 0.013,
+    },
+    {
+        id: 2,
+        imageURI: "https://image.tmdb.org/t/p/w500/tjpiEnZBUAA8pdNPRKa5vP2Zpqw.jpg",
+        title: "RRR",
+        genre: "Action / Drama",
+        description: "A fictional tale about two legendary revolutionaries who go on a journey before they take up arms against British rule in 1920s India.",
+        ticketPrice: 0.012,
+    },
+    {
+        id: 3,
+        imageURI: "https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg",
+        title: "Interstellar",
+        genre: "Sci-Fi / Adventure",
+        description: "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival across an imperiled Earth.",
+        ticketPrice: 0.015,
+    },
+    {
+        id: 4,
+        imageURI: "https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg",
+        title: "Inception",
+        genre: "Sci-Fi / Thriller",
+        description: "A thief who steals corporate secrets through dream-sharing technology is given the inverse task of planting an idea into a target's mind.",
+        ticketPrice: 0.014,
+    },
+    {
+        id: 5,
+        imageURI: "https://upload.wikimedia.org/wikipedia/en/9/96/Zootopia_%28movie_poster%29.jpg",
+        title: "Zootopia",
+        genre: "Animation / Comedy",
+        description: "In a city of anthropomorphic animals, a rookie bunny cop and a cynical con artist fox must work together to uncover a conspiracy.",
+        ticketPrice: 0.009,
+    },
+]

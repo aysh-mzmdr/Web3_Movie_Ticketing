@@ -26,6 +26,7 @@ export default function MoviePage() {
   const movie = movies.find((m) => m.id === Number(movieId));
 
   const takenSeats = useMemo(() => generateTakenSeats(Number(movieId)), [movieId]);
+
   const [selectedSeats, setSelectedSeats] = useState(new Set());
   const [txStatus, setTxStatus] = useState("idle"); // idle | pending | success | failed
   const [txHash, setTxHash] = useState(null);
@@ -63,6 +64,7 @@ export default function MoviePage() {
 
     setTxStatus("pending");
     setTxHash(null);
+    
     try {
       const tx = await web3.eth.sendTransaction({
         from: account,
